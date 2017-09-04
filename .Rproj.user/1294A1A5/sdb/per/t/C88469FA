@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(jiebaR)\nlibrary(stringr)\nlibrary(magrittr)\nlibrary(dplyr)\nlibrary(text2vec)\nlibrary(ggplot2)\nlibrary(plotly)\nlibrary(shiny)\nlibrary(shinydashboard)\nlibrary(DT)\nlibrary(wordcloud2)\nlibrary(reshape2)\noptions(shiny.launch.browser = T)\n\n# 爬虫都在crawlers做\n# 然后过load_data.R, 会添上senti score, 变成.*_comment_sen.RData\n# 再过wordCloud_brand_comment.R, 会得到.*_all_rank.RData & .*_wc_all.RData\n# 再过outline_brand_comment.R, 会得到.*_inf.RData\n\nbrandname = c('iwill', 'holiland', 'efdc', 'gb', 'cfxb')\ni=1\n\nload(paste0('.\\\\output\\\\', brandname[i], '_comment_sen.RData'))\nload(paste0('.\\\\output\\\\', brandname[i], '_all_rank.RData'))\nload(paste0('.\\\\output\\\\', brandname[i], '_wc_all.RData'))\nload(paste0('.\\\\output\\\\', brandname[i], '_all_inf.RData'))\nload(paste0('.\\\\output\\\\', brandname[i], '_shop_inf.RData'))\nload(paste0('.\\\\output\\\\', brandname[i], '_product_inf.RData'))\nload('.\\\\output\\\\iwill_product.RData')\nkdyjscy_comment = get(paste0(brandname[i], '_comment'))\n",
+    "created" : 1504153738556.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1148590462",
+    "id" : "C88469FA",
+    "lastKnownWriteTime" : 1504161261,
+    "last_content_update" : 1504161261,
+    "path" : "C:/work/liutongbu/kdyjscy/shiny/global.r",
+    "project_path" : "shiny/global.r",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
